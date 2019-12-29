@@ -1,12 +1,37 @@
-# 🥳 Placeholder
+# 🥳 PLACEHOLDER
 
-Description.
+DESCRIPTION OF THE LAMBDA
 
-# The End
+# .Env
 
-If you enjoyed this project, please consider giving it a 🌟. And check out our [0x4447 GitHub account](https://github.com/0x4447), where you'll find additional resources you might find useful or interesting.
+```
+DB_URI=
+```
 
-## Sponsor 🎊
+# How to run locally
 
-This project is brought to you by 0x4447 LLC, a software company specializing in building custom solutions on top of AWS. Follow this link to learn more: https://0x4447.com. Alternatively, send an email to [hello@0x4447.email](mailto:hello@0x4447.email?Subject=Hello%20From%20Repo&Body=Hi%2C%0A%0AMy%20name%20is%20NAME%2C%20and%20I%27d%20like%20to%20get%20in%20touch%20with%20someone%20at%200x4447.%0A%0AI%27d%20like%20to%20discuss%20the%20following%20topics%3A%0A%0A-%20LIST_OF_TOPICS_TO_DISCUSS%0A%0ASome%20useful%20information%3A%0A%0A-%20My%20full%20name%20is%3A%20FIRST_NAME%20LAST_NAME%0A-%20My%20time%20zone%20is%3A%20TIME_ZONE%0A-%20My%20working%20hours%20are%20from%3A%20TIME%20till%20TIME%0A-%20My%20company%20name%20is%3A%20COMPANY%20NAME%0A-%20My%20company%20website%20is%3A%20https%3A%2F%2F%0A%0ABest%20regards.).
+First install all the modules
+```
+npm run install
+```
 
+then run the code
+
+```
+npm run locally
+```
+
+# How to fake a request
+
+To run the Lambda locally you can fake a a request by using two files:
+
+- lambda-payloads.json
+- lambda-context.json
+
+### lambda-payloads.json
+
+This file is the fake payload that will be under the `event` variable name. Here you can put anything, from fake AWS resources messages to your own custom messages.
+
+### lambda-context.json
+
+This file normally is not necessary but since we are connecting to a regular SQL DB, we need to fake the `context` variable to mimic the environment in AWS.

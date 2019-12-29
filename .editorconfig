@@ -1,12 +1,12 @@
 # EditorConfig is awesome: https://EditorConfig.org
 
 #
-#   top-most EditorConfig file
+#	top-most EditorConfig file
 #
 root = true
 
 #
-#   Default Settings.
+#	Default Settings.
 #
 [*]
 indent_style = space
@@ -17,21 +17,8 @@ insert_final_newline = true
 charset = utf-8
 
 #
-#   Custom files.
+#	Custom indentation for special files that we don't have control over.
 #
-[{package.json,.travis.yml}]
+[{package.json,*.yml}]
 indent_style = space
 indent_size = 2
-
-#
-#   Makefile Setting
-#
-[Makefile]
-indent_style = tab
-
-#
-#   Python Setting
-#
-[*.py]
-indent_style = space
-indent_size = 4
